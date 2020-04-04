@@ -1,7 +1,33 @@
 package com.briedgelabz.testmaximum;
 
-public class FindMaximum {
-    public int findMaxInt(int i, int i1, int i2) {
+public class FindMaximum < V extends Comparable <V> >{
+
+    V firstValue;
+    V secondValue;
+    V thirdValue;
+
+    public FindMaximum(){
+
+    }
+
+    public FindMaximum(V firstValue, V secondValue, V thirdValue){
+        this.firstValue=firstValue;
+        this.secondValue=secondValue;
+        this.thirdValue=thirdValue;
+    }
+
+    public V findMaximum (V firstValue, V secondValue, V thirdValue){
+        V maxValue = firstValue;
+        if( secondValue.compareTo(maxValue) > 0) maxValue = secondValue;
+        if( thirdValue.compareTo(maxValue) > 0) maxValue = thirdValue;
+        return maxValue;
+    }
+
+    public <V extends Comparable<V>> V findMaximum()
+    {
+        return (V) findMaximum(firstValue,secondValue,thirdValue);
+    }
+    /*public int findMaxInt(int i, int i1, int i2) {
         int maxInt = i;
         if ( i1 > maxInt ) maxInt = i1;
         if ( i2 > maxInt ) maxInt = i2;
@@ -20,5 +46,5 @@ public class FindMaximum {
         if( s1.compareTo(maxString) > 0) maxString = s1;
         if( s2.compareTo(maxString) > 0) maxString = s2;
         return maxString;
-    }
+    }*/
 }
