@@ -14,4 +14,11 @@ public class FindMaximum {
         if ( f2 > maxFloat ) maxFloat = f2;
         return maxFloat;
     }
+
+    public String findMaxString(String s, String s1, String s2) {
+        String maxString =  s;
+        if( s1.compareTo(maxString) > 0) maxString = s1;
+        if( s2.compareTo(maxString) > 0) maxString = s2;
+        return maxString;
+    }
 }
