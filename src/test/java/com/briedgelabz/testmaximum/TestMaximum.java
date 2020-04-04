@@ -1,15 +1,12 @@
 package com.briedgelabz.testmaximum;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class TestMaximum {
 
-   // FindMaximum intObject;
-
-    @Test
-    public void givenMaxIntegerAtFirstPosition_shouldReturnFirstPosition() {
+      @Test
+    public void agivenMaxIntegerAtFirstPosition_shouldReturnFirstPosition() {
         FindMaximum findMaximum = new FindMaximum();
         Comparable maximumValue = findMaximum.findMaximum(22,2,3);
         Assert.assertEquals(22, maximumValue);
@@ -78,6 +75,14 @@ public class TestMaximum {
         String maxString = (String) findMaximum.findMaximum("apple", "banana", "peach");
         Assert.assertEquals("peach", maxString);
         System.out.println("Max string: "+ maxString);
+    }
+
+    @Test
+    public void givenMaxIntegerAtFirstPosition_shouldReturnFirstPosition() {
+        FindMaximum findMaximum = new FindMaximum();
+        Comparable maximumValue = findMaximum.findMaximum(1, 2, 3, 4, 5);
+        Assert.assertEquals(5, maximumValue);
+        System.out.println("Max value: " + maximumValue);
     }
 
 }
