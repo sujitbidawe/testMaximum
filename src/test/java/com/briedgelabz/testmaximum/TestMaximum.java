@@ -30,4 +30,28 @@ public class TestMaximum {
         Assert.assertEquals(22, maxInt);
         System.out.println("Max number: " + maxInt);
     }
+
+    @Test
+    public void givenMaxFloatAtFirstPosition_shouldReturnFirstPosition() {
+        FindMaximum findMaximum = new FindMaximum();
+        double maxFloat = findMaximum.findMaxFloat(22.1, 2.1, 3.1);
+        Assert.assertEquals(22.1, maxFloat, 0.0);
+        System.out.println("Max number: " + maxFloat);
+    }
+
+    @Test
+    public void givenMaxFloatAtSecondPosition_shouldReturnFirstPosition() {
+        FindMaximum findMaximum = new FindMaximum();
+        double maxFloat = findMaximum.findMaxFloat(1.1, 22.1, 3.1);
+        Assert.assertEquals(22.1, maxFloat, 0.0);
+        System.out.println("Max number: " + maxFloat);
+    }
+
+    @Test
+    public void givenMaxFloatAtThirdPosition_shouldReturnFirstPosition() {
+        FindMaximum findMaximum = new FindMaximum();
+        double maxFloat = findMaximum.findMaxFloat(1.1, 2.1, 22.1);
+        Assert.assertEquals(22.1, maxFloat, 0.0);
+        System.out.println("Max number: " + maxFloat);
+    }
 }
